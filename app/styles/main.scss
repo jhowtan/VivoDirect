@@ -1,4 +1,5 @@
 $icon-font-path: '../fonts/';
+$button-color: #C8B4BE;
 
 // bower:scss
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -58,6 +59,10 @@ ul#shops-list {
   }
   .carousel-control.right, .carousel-control.left {
     background-image: none;
+  }
+  .button.active {
+    background: none;
+    background-color: rgba(200, 180, 190, 0.7);
   }
   // .feature-list {
   //   vertical-align: top;
