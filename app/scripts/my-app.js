@@ -11,11 +11,21 @@ var mainView = myApp.addView('.view-main', {
 });
 
 // Callbacks to run specific code for specific pages, for example for About page:
-myApp.onPageInit('about', function (page) {
+myApp.onPageInit('promo', function (page) {
     // run createContentPage func after link was clicked
     $$('.create-page').on('click', function () {
         createContentPage();
     });
+});
+
+myApp.onPageInit('dir', function (page) {
+    for (var i=0; i<shops.length; i++) {
+      $('#shops-list').append('<li class="item-content">'+ shops[i].name + '</li>');
+    }
+    for (var i=0; i<categories.length; i++) {
+        $('#cat-list').append('<li class="item-content">'+ categories[i].name + '</li>');
+    }
+
 });
 
 // Generate dynamic page

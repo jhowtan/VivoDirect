@@ -41,10 +41,6 @@ for (var i = 0; i < categories.length-1; i++ ) {
     shops.push(categories[i].shops.shop[j]);
   }
 }
-
-categories = categories;
-shops = shops;
-
 var options = {
   caseSensitive: false,
   includeScore: false,
@@ -58,4 +54,4 @@ var options = {
 
 var fCat = new Fuse(categories, options);
 var fShop = new Fuse(shops, options);
-$('.carousel').carousel()
+
