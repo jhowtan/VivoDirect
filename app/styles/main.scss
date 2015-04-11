@@ -18,17 +18,20 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-.button-group {
-  margin-top: 20px;
-  padding: 120px 50px;
-  .button {
-    background-color: rgba(73, 77, 158, 0.8);
+.page-content {
+  margin: 80px 50px;
+  text-align: center;
+  h1, h2, p {
+    color:white;
   }
-}
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  .button-group {
+    margin-top: 20px;
+    .button {
+      color: #FFFFFF;
+      background-color: rgba(200, 180, 190, 0.7);
+      border: 0px;
+    }
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
