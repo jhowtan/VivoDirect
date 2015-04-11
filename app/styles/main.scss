@@ -3,6 +3,13 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+.icon-bar {
+  background-color: black;
+}
+.background {
+  position: absolute;
+  -webkit-filter: blur(5px);
+}
 
 .browserupgrade {
   margin: 0.2em 0;
