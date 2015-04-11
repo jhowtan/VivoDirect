@@ -1,63 +1,80 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>VivoDirect</title>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>VivoDirect</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.min.css">
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.min.css">
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 
-  </head>
-  <body>
-   <!-- Status bar overlay for full screen mode (PhoneGap) -->
-    <div class="statusbar-overlay">Test Test Test</div>
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-cover">
-      <div class="content-block">
-        <ul>
-          <p><a href="#" class="close-panel">Search</a></p>
-          <p><a href="#" class="close-panel">Directory</a></p>
-          <p><a href="#" class="close-panel">Promotions</a></p>
-        </ul>
+</head>
+<body>
+ <!-- Status bar overlay for full screen mode (PhoneGap) -->
+ <div class="statusbar-overlay">Test Test Test</div>
+ <!-- Panels overlay-->
+ <div class="panel-overlay"></div>
+ <!-- Left panel with reveal effect-->
+ <div class="panel panel-left panel-cover">
+  <div class="content-block">
+    <ul>
+      <p><a href="#" class="close-panel">Search</a></p>
+      <p><a href="#" class="close-panel">Directory</a></p>
+      <p><a href="#" class="close-panel">Promotions</a></p>
+    </ul>
+  </div>
+</div>
+<!-- Right Panel with Cover effect -->
+<div class="panel panel-right panel-cover">
+  <div class="content-block">
+    <!-- Search Function -->
+    <form class="searchbar">
+      <div class="searchbar-input">
+        <input type="search" placeholder="Search">
+        <a href="#" class="searchbar-clear"></a>
       </div>
-    </div>
-    <!-- Right Panel with Cover effect -->
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right Panel content here</p>
-        <!-- Click on link with "close-panel" class will close panel -->
-        <p><a href="#" class="close-panel">Close me</a></p>
-        <!-- Click on link with "open-panel" and data-panel="left" attribute will open Left panel -->
-        <p><a href="#" data-panel="left" class="open-panel">Open Left Panel</a></p>
-      </div>
-    </div>
+      <a href="#" class="searchbar-cancel">Cancel</a>
+    </form>
+
+    <!-- Search bar overlay-->
+<!--  <!-- Page content -->
+    <div class="page-content">
+        <div class="content-block searchbar-not-found">
+                Nothing found
+        </div>
+
+        <div class="list-block list-block-search searchbar-found">
+            <ul>
+                ... list view items ...
+            </ul>
+        </div>
+    </div> -->
+  </div>
+</div>
 
 
-    <!-- Views -->
-    <div class="views">
-      <!-- Your main view, should have "view-main" class -->
-      <div class="view view-main">
-        <!-- Top Navbar-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left">
-            </div>
-            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-            <div class="center sliding">VivoDirect</div>
-            <div class="right">
+<!-- Views -->
+<div class="views">
+  <!-- Your main view, should have "view-main" class -->
+  <div class="view view-main">
+    <!-- Top Navbar-->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+        </div>
+        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+        <div class="center sliding">VivoDirect</div>
+        <div class="right">
               <!--
                 Right link contains only icon - additional "icon-only" class
                 Additional "open-panel" class tells app to open panel when we click on this link
@@ -95,7 +112,7 @@
             <a href="#" class="link">Link 2</a>
           </div>
         </div>
-  -->     </div>
+      -->     </div>
     </div>
 
     <!-- build:js scripts/vendor.js -->
@@ -105,26 +122,26 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:js scripts/my-app.js -->
-        <script src="scripts/fuse.js"></script>
-        <script src="scripts/my-app.js"></script>
-        <script src="scripts/directory.js"></script>
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+    <!-- build:js scripts/my-app.js -->
+    <script src="scripts/fuse.js"></script>
+    <script src="scripts/my-app.js"></script>
+    <script src="scripts/directory.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+  </html>

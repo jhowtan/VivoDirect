@@ -58,3 +58,4 @@ var options = {
 
 var fCat = new Fuse(categories, options);
 var fShop = new Fuse(shops, options);
+$('.carousel').carousel()

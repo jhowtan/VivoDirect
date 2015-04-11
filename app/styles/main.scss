@@ -35,20 +35,30 @@ $icon-font-path: '../fonts/';
 }
 
 .promo>.page-content {
-  margin-top: 6px;
-  text-align: center;
-  h1, h2, p {
-    color:white;
+  .buttons-row>.tab-link{
+    color: white;
+    line-height: 60px;
+    height: 60px;
+    border: 1px solid white;
   }
-  .button-group {
-    margin-top: 20px;
-    .button {
-      color: #FFFFFF;
-      background-color: rgba(200, 180, 190, 0.7);
-      border: 0px;
-    }
+  .card {
+    margin: 0px 0px;
   }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+  }
+  // .feature-list {
+  //   vertical-align: top;
+  //   position: relative;
+  //   overflow-y: auto;
+  //   -webkit-overflow-scrolling: touch;
+  //   .card {
+  //     width: 100px;
+  //     height: 100px;
+  //     display: inline-block;
+  //   }
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
