@@ -32,6 +32,12 @@ myApp.onPageInit('dir', function (page) {
     });
 });
 
+myApp.onPageInit('navi', function (page) {
+    // take storeId variable into navigation consideration.
+    // will probably draw on canvas
+});
+
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
