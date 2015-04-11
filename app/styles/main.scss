@@ -18,6 +18,13 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
+.button-group {
+  margin-top: 20px;
+  padding: 120px 50px;
+  .button {
+    background-color: rgba(73, 77, 158, 0.8);
+  }
+}
 /* Space out content a bit */
 body {
   padding-top: 20px;
