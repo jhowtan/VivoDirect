@@ -1,0 +1,10 @@
+{
+  "name": "vivodirect",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1"
+  },
+  "devDependencies": {
+    "framework7": "~1.0.5"
+  }
+}
