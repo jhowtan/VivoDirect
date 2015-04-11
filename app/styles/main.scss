@@ -18,8 +18,24 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-.page-content {
+.index>.page-content {
   margin: 80px 50px;
+  text-align: center;
+  h1, h2, p {
+    color:white;
+  }
+  .button-group {
+    margin-top: 20px;
+    .button {
+      color: #FFFFFF;
+      background-color: rgba(200, 180, 190, 0.7);
+      border: 0px;
+    }
+  }
+}
+
+.promo>.page-content {
+  margin-top: 6px;
   text-align: center;
   h1, h2, p {
     color:white;
