@@ -20,12 +20,16 @@ myApp.onPageInit('promo', function (page) {
 
 myApp.onPageInit('dir', function (page) {
     for (var i=0; i<shops.length; i++) {
-      $('#shops-list').append('<li class="item-content">'+ shops[i].name + '</li>');
+      $('#shops-list').append('<li class="item-content">' +
+                                '<div class="item-inner">' +
+                                    '<div class="item-title">' + shops[i].name  + '</div>'+
+                                '</div>'+
+                                '</li>');
     }
-    for (var i=0; i<categories.length; i++) {
-        $('#cat-list').append('<li class="item-content">'+ categories[i].name + '</li>');
-    }
-
+    var mySearchbar = myApp.searchbar('.searchbar', {
+        searchList: '.list-block-search',
+        searchIn: '.item-title'
+    });
 });
 
 // Generate dynamic page
