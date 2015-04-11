@@ -102,7 +102,9 @@ function createStorePage(index) {
         '    <!-- Scrollable page content-->' +
         '    <div class="page-content">' +
         '      <div class="content-block">' +
-        '        <div class="content-block-inner">' +
+        '       <div class="image">' +
+        '       <img src="'+ imgUrl +'"></div>' +
+        '        <div class="image">' +
         '          <h1>' + name + '</h1>' +
         '          <p>' + desc + '</p>' +
         '          <p>Go <a href="#" class="back">back</a> or navigate to <a href="navigate.html">' + name+ '</a>.</p>' +
