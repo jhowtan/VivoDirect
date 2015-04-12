@@ -68,17 +68,22 @@ function createCatPage(index) {
     '  <div data-page="category" class="page">' +
     '    <div class="page-content">' +
     '      <div class="content-block-title">' + categories[index].name + '</div>' +
-    '        <ul id="shops-list"></ul>' +
+    '        <div class="list-block">' +
+    '         <ul id="catShop-list"></ul></div>' +
     '      </div>' +
     '   </div>' +
     '</div>');
   for (var i=0; i< catShopList.length; i++) {
-      $('#shops-list').append('<li class="item-content shop-page" data-id="'+i+'"">' +
+      $('#catShop-list').append('<li class="item-content item-link catShop-page" data-id="'+i+'"">' +
                               '<div class="item-inner">' +
                                   '<div class="item-title">' + catShopList[i].name  + '</div>'+
                               '</div>'+
                               '</li>');
       }
+  $$('.catShop-page').on('click', function(){
+      var index = $(this).data('id');
+      createStorePage(index);
+  });
 }
 
 // myApp.onPageInit('category', function (page) {
