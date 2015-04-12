@@ -35,6 +35,16 @@ $button-color: #C8B4BE;
   }
 }
 
+#map-container {
+  margin-top: 10px;
+  align: center;
+}
+#map {
+  width: 300px;
+  height: 400px;
+  border: 1px solid white;
+}
+
 form.searchbar {
   margin-top: 6px;
 }
