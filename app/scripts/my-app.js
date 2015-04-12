@@ -20,7 +20,7 @@ myApp.onPageInit('promo', function (page) {
 
 myApp.onPageInit('dir', function (page) {
     for (var i=0; i<shops.length; i++) {
-      $('#shops-list').append('<li class="item-content shop-page" data-id="'+i +'">' +
+      $('#shops-list').append('<li class="item-content item-link shop-page" data-id="'+i +'">' +
                                 '<div class="item-inner">' +
                                     '<div class="item-title">' + shops[i].name  + '</div>'+
                                 '</div>'+
@@ -48,9 +48,10 @@ myApp.onPageInit('dir', function (page) {
 
     $$('.shop-page').on('click', function(){
         var index = $(this).data('id');
-        console.log(index);
         createStorePage(index);
     });
+
+
 });
 
 myApp.onPageInit('category', function (page) {
@@ -88,7 +89,7 @@ function createStorePage(index) {
     var lvl = shop.level;
     var tel = shop.tel;
 
-	mainView.router.loadContent(
+	  mainView.router.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
@@ -112,7 +113,8 @@ function createStorePage(index) {
         '      </div>' +
         '    </div>' +
         '  </div>' +
-        '</div>'
+        '</div>' +
+        ''
     );
 	return;
 }
