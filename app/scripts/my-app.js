@@ -41,13 +41,13 @@ myApp.onPageInit('dir', function (page) {
     });
 
     $$('.shop-page').on('click', function(){
-        var index = $(this).data('id');
-        createStorePage(index);
+        var shopIndex = $(this).data('id');
+        createStorePage(shopIndex);
     });
 
     $$('.cat-page').on('click', function(){
-        var index = $(this).data('id');
-        createCatPage(index);
+        var catIndex = $(this).data('id');
+        createCatPage(catIndex);
     });
 });
 
@@ -81,8 +81,8 @@ function createCatPage(index) {
                               '</li>');
       }
   $$('.catShop-page').on('click', function(){
-      var index = $(this).data('id');
-      createStorePage(index);
+      var id = $(this).data('id');
+      createCatStorePage(id, catShopList);
   });
 }
 
@@ -112,6 +112,50 @@ myApp.onPageInit('navi', function (page) {
     // take storeId variable into navigation consideration.
     // will probably draw on canvas
 });
+
+function createCatStorePage(index, catShopList) {
+    var shop = catShopList[index];
+    var name = shop.name;
+    var desc = shop.desc;
+    var imgUrl = shop.img;
+    var lvl = shop.level;
+    var tel = shop.tel;
+
+      mainView.router.loadContent(
+        '<!-- Top Navbar-->' +
+        '<div class="navbar">' +
+        '  <div class="navbar-inner">' +
+        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
+        '    <div class="center sliding">' + name + '</div>' +
+        '  </div>' +
+        '</div>' +
+        '<div class="pages">' +
+        '  <!-- Page, data-page contains page name-->' +
+        '  <div data-page="shop" class="page">' +
+        '    <!-- Scrollable page content-->' +
+        '    <div class="page-content">' +
+        '      <div class="content-block">' +
+        '       <div class="image">' +
+        '       <img src="'+ imgUrl +'"></div>' +
+        '        <div class="image">' +
+        '          <h1>' + name + '</h1>' +
+        '          <p>' + desc + '</p>' +
+        '          <p>Go <a href="#" class="back">back</a> or navigate to <a href="navigate.html">' + name+ '</a>.</p>' +
+        '        </div>' +
+        '      </div>' +
+        '    </div>' +
+        '  </div>' +
+        '</div>' +
+        '<div class="toolbar">' +
+        '  <div class="toolbar-inner">' +
+        '    <a href="#" class="link">Link 1</a>' +
+        '    <a href="#" class="link">Link 2</a>' +
+        '    <a href="#" class="link">Link 3</a>' +
+        '  </div>' +
+        '</div>'
+    );
+    return;
+}
 
 function createStorePage(index) {
     var shop = shops[index];
