@@ -108,7 +108,7 @@ function createCatStorePage(index, catShopList) {
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
-    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-green">Call</a>');
+    $('#tel').html('<a href="'+tel+'" class="button button-big button-fill color-green">Call</a>');
     return;
 
     //   mainView.router.loadContent(
