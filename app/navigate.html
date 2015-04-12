@@ -1,6 +1,7 @@
 <div class="navbar">
   <div class="navbar-inner">
     <div class="left">
+      <a href="index.html" class="back"> Back </a>
     </div>
     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
     <div class="center sliding">Navigation</div>
@@ -17,11 +18,20 @@
 
 <div class="pages navbar-through toolbar-through">
   <!-- Page, "data-page" contains page name -->
-  <div data-page="promo" class="page no-toolbar">
+  <div data-page="navi" class="page">
     <img class="background" src="/images/main_bg3.jpg">
     <!-- Scrollable page content -->
     <div class="page-content">
-      <h1>Navigation</h1>
+     <div id="map-container">
+       <canvas id="map"></canvas>
+     </div>
+     <div class="toolbar">
+      <div class="toolbar-inner">
+        <a href="#" class="link">Link 1</a>
+        <a href="#" class="link">Link 2</a>
+        <a href="#" class="link">Link 3</a>
+      </div>
     </div>
   </div>
+</div>
 </div>
