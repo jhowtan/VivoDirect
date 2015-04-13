@@ -46,6 +46,9 @@ article {
     vertical-align: middle;
     text-align: center;
 }
+.content-block-title {
+  color: white;
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -60,11 +63,12 @@ article {
     color:white;
   }
   .button-group {
-    margin-top: 20px;
+    margin-top: 50px;
     .button {
       color: #FFFFFF;
       background-color: rgba(200, 180, 190, 0.7);
       border: 0px;
+      margin-top: 30px;
     }
   }
 }
