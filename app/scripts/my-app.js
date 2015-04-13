@@ -13,8 +13,23 @@ var mainView = myApp.addView('.view-main', {
 // Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('promo', function (page) {
     // run createContentPage func after link was clicked
-    $$('.create-page').on('click', function () {
-        createContentPage();
+    $$('#promo-aldo').on('click', function () {
+        createStorePage(0);
+    });
+    $$('#promo-uniqlo').on('click', function () {
+        createStorePage(144);
+    });
+    $$('#promo-tangs').on('click', function () {
+        createStorePage(205);
+    });
+    $$('#promo-goldheart').on('click', function () {
+        createStorePage(217);
+    });
+    $$('#ft-levis').on('click', function () {
+        createStorePage(127);
+    });
+    $$('#ft-timber').on('click', function () {
+        createStorePage(140);
     });
 });
 
@@ -51,28 +66,22 @@ myApp.onPageInit('dir', function (page) {
     });
 });
 
+
+
+myApp.onPageInit('navi', function (page) {
+    // take storeId variable into navigation consideration.
+    // will probably draw on canvas
+});
+
+
+
+// Dynamic List Creation for Categories
 function createCatPage(index) {
   var catShopList = [];
   for (var i=0; i<categories[index].shops.shop.length; i++) {
       catShopList.push(categories[index].shops.shop[i]);
   }
   mainView.router.loadContent($('#catPage').html());
-  //   '<!-- Top Navbar-->' +
-  //   '<div class="navbar">' +
-  //   '  <div class="navbar-inner">' +
-  //   '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-  //   '    <div class="center sliding">' + categories[index].name + '</div>' +
-  //   '  </div>' +
-  //   '</div>' +
-  //   '<div class="pages navbar-through toolbar-through">' +
-  //   '  <div data-page="category" class="page">' +
-  //   '    <div class="page-content">' +
-  //   '      <div class="content-block-title">' + categories[index].name + '</div>' +
-  //   '        <div class="list-block">' +
-  //   '         <ul id="catShop-list"></ul></div>' +
-  //   '      </div>' +
-  //   '   </div>' +
-  //   '</div>');
   $('#catTitle').html(categories[index].name);
   $('#catName').html(categories[index].name);
   for (var i=0; i< catShopList.length; i++) {
@@ -88,11 +97,7 @@ function createCatPage(index) {
   });
 }
 
-myApp.onPageInit('navi', function (page) {
-    // take storeId variable into navigation consideration.
-    // will probably draw on canvas
-});
-
+// Create Store Page from Category List
 function createCatStorePage(index, catShopList) {
     var shop = catShopList[index];
     var name = shop.name;
@@ -103,50 +108,16 @@ function createCatStorePage(index, catShopList) {
     var tel = shop.tel;
 
     mainView.router.loadContent($('#shopPage').html());
-    $('#title').text(name);
-    $('.img-holder').append('<img src="'+ imgUrl +'">');
+    $('#title').html(name);
+    $('.img-holder').html('<img src="'+ imgUrl +'">');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
-    $('#tel').html('<a href="'+tel+'" class="button button-big button-fill color-green">Call</a>');
-    return;
-
-    //   mainView.router.loadContent(
-    //     '<!-- Top Navbar-->' +
-    //     '<div class="navbar">' +
-    //     '  <div class="navbar-inner">' +
-    //     '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-    //     '    <div class="center sliding">' + name + '</div>' +
-    //     '  </div>' +
-    //     '</div>' +
-    //     '<div class="pages">' +
-    //     '  <!-- Page, data-page contains page name-->' +
-    //     '  <div data-page="shop" class="page">' +
-    //     '    <!-- Scrollable page content-->' +
-    //     '    <div class="page-content">' +
-    //     '      <div class="content-block">' +
-    //     '       <div class="image">' +
-    //     '       <img src="'+ imgUrl +'"></div>' +
-    //     '        <div class="image">' +
-    //     '          <h1>' + name + '</h1>' +
-    //     '          <p>' + desc + '</p>' +
-    //     '          <p>Go <a href="#" class="back">back</a> or navigate to <a href="navigate.html">' + name+ '</a>.</p>' +
-    //     '        </div>' +
-    //     '      </div>' +
-    //     '    </div>' +
-    //     '  </div>' +
-    //     '</div>' +
-    //     '<div class="toolbar">' +
-    //     '  <div class="toolbar-inner">' +
-    //     '    <a href="#" class="link">Link 1</a>' +
-    //     '    <a href="#" class="link">Link 2</a>' +
-    //     '    <a href="#" class="link">Link 3</a>' +
-    //     '  </div>' +
-    //     '</div>'
-    // );
+    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-green">Call</a>');
     return;
 }
 
+// Dynamic Page Injection of Store Information
 function createStorePage(index) {
     var shop = shops[index];
     var name = shop.name;
@@ -157,8 +128,8 @@ function createStorePage(index) {
     var tel = shop.tel;
 
     mainView.router.loadContent($('#shopPage').html());
-    $('#title').text(name);
-    $('.img-holder').append('<img src="'+ imgUrl +'">');
+    $('#title').html(name);
+    $('.img-holder').html('<img src="'+ imgUrl +'">');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
