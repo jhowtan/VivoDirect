@@ -30,12 +30,13 @@
 <!-- Right Panel with Cover effect -->
 <div class="panel panel-right panel-cover">
   <div class="content-block">
+    <div class="content-block-title">Menu</div>
     <div class="list-block">
     <ul>
-      <li class="item-content close-panel go-home"><a href="index.html">Home</a></li>
-      <li class="item-content close-panel go-promo"><a href="promotions.html">Promotions</a></li>
-      <li class="item-content close-panel go-dir"><a href="dir.html">Directory</a></li>
-      <li class="item-content close-panel go-navi"><a href="navigate.html">Navigation</a></li>
+      <a class="close-panel" href="index.html"><li class="item-content">Home</li></a>
+      <a class="close-panel" href="promotions.html"><li class="item-content">Promotions</li></a>
+      <a class="close-panel" href="dir.html"><li class="item-content">Directory</li></a>
+      <a class="close-panel" href="navigate.html"><li class="item-content">Navigation</li></a>
     </ul>
   </div>
   </div>
@@ -72,9 +73,78 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
+
+<script type="text/template" id="catPage">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left">
+        <a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a>
+      </div>
+      <div class="center sliding" id="catTitle"></div>
+      <div class="right">
+        <button type="button" class="navbar-toggle open-panel" data-panel="right" >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="pages navbar-through toolbar-through">
+    <div data-page="category" class="page">
+      <div class="page-content">
+        <div class="content-block-title" id="catName"></div>
+        <div class="list-block">
+          <ul id="catShop-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="shopPage">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+      <div class="center sliding" id="title"></div>
+      <div class="right">
+        <button type="button" class="navbar-toggle open-panel" data-panel="right" >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="pages">
+  <div data-page="shop" class="page">
+    <div class="page-content">
+      <div class="content-block">
+         <div class="image img-holder">
+         </div>
+         <div class="image">
+          <h1 id="shopName"></h1>
+          <p id="location"></p>
+          <p id="shopDesc"></p>
+          <div class="row">
+            <div class="col-50">
+              <a id="tel">
+            </div>
+            <div class="col-50" id="navigate-to">
+              <a href="navigate.html" class="button button-big button-fill color-blue">Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
