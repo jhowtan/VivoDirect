@@ -86,6 +86,10 @@ myApp.onPageInit('navi', function (page) {
         var shopIndex = $(this).data('id');
         showShopLocation(shopIndex);
     });
+
+    $$('#fa-map-marker').on('click', function(){
+      scrollToMiddle($('#currloc'), $('#maploc'));
+    })
 });
 
 function showShopLocation(id) {
@@ -169,4 +173,19 @@ function createStorePage(index) {
         });
     });
 	return;
+}
+
+function scrollToMiddle(containerID, elID)
+{
+  // If element does not Exist then return
+  var el = document.getElementById(elID);
+  if (el == null) return;
+
+  // If container does not Exist then return
+  var container = document.getElementById(containerID);
+  if (container == null) return;
+
+  var middle_height = (-1) * container.clientHeight / 2;
+
+  el.top = middle_height + "px";
 }
