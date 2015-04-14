@@ -17,19 +17,19 @@ myApp.onPageInit('promo', function (page) {
         createStorePage(0);
     });
     $$('#promo-uniqlo').on('click', function () {
-        createStorePage(144);
+        createStorePage(140);
     });
     $$('#promo-tangs').on('click', function () {
-        createStorePage(205);
+        createStorePage(201);
     });
     $$('#promo-goldheart').on('click', function () {
-        createStorePage(217);
+        createStorePage(213);
     });
     $$('#ft-levis').on('click', function () {
-        createStorePage(127);
+        createStorePage(123);
     });
     $$('#ft-timber').on('click', function () {
-        createStorePage(140);
+        createStorePage(136);
     });
 });
 
