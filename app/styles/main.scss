@@ -60,10 +60,54 @@ article {
     background-color: rgba(0,0,0,0.2);
   }
   #promo {
-    // background-image: url("https://pbs.twimg.com/profile_images/2586664217/o78k5fogx5g3hdy6peai.jpeg");
+    color: white;
+    background-color: #0E3D59;
+  }
+  #dir {
+    color: white;
+    background-color: #88A61B;
+  }
+  #nav {
+    color: white;
+    background-color: #F29F05;
+  }
+}
+.nav-index{
+  color: white;
+  background-color: #F25C05;
+}
+.nav-promo{
+  color: white;
+  background-color: #0E3D59;
+}
+.nav-dir{
+  color: white;
+  background-color: #88A61B;
+}
+.nav-navi{
+  color: white;
+  background-color: #F29F05;
+}
+.navbar{
+  a:link, a:hover, a:active, a:visited {
+    color: white;
   }
 }
 
+.map-container {
+  margin: 0 auto;
+  margin-top: 15%;
+  width: 90%;
+  height: 400px;
+  overflow: scroll;
+}
+.nav-container {
+  margin: 0 auto;
+  margin-top: 15%;
+  width: 90%;
+  height: 400px;
+  overflow: scroll;
+}
 .index>.page-content {
   // margin: 80px 50px;
   text-align: center;
@@ -98,6 +142,10 @@ form.searchbar {
 // ul#shops-list {
 //   margin-top: 6px;
 // }
+#shopDesc {
+  height: 100px;
+  overflow-y: scroll;
+}
 
 .list-block {
   margin-top: 0px;
@@ -116,14 +164,10 @@ form.searchbar {
   height: 60px;
   border: 1px solid white;
 }
+
 .promo {
   .page-content {
     padding-top: 0px;
-    // .buttons-row>.tab-link{
-    //   color: white;
-    //   line-height: 60px;
-    //   height: 60px;
-    //   border: 1px solid white;
   }
   .card {
     margin: 0px 0px;

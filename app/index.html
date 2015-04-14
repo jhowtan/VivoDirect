@@ -48,7 +48,7 @@
   <div class="view view-main">
     <!-- Top Navbar-->
     <div class="navbar">
-      <div class="navbar-inner">
+      <div class="navbar-inner nav-index">
         <div class="left">
         </div>
         <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
@@ -92,7 +92,7 @@
 <script type="text/template" id="catPage">
   <div class="navbar">
     <div class="navbar-inner">
-      <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+      <div class="left"><a href="#" class="back link"><i class="icon fa fa-chevron-left"></i><span>Back</span></a></div>
       <div class="center sliding" id="catTitle"></div>
       <div class="right">
         <span class="fa fa-bars navbar-toggle open-panel" data-panel="right"></span>
@@ -115,7 +115,7 @@
 <script type="text/template" id="shopPage">
   <div class="navbar">
     <div class="navbar-inner">
-      <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+      <div class="left"><a href="#" class="back link"><i class="icon fa fa-chevron-left"></i><span>Back</span></a></div>
       <div class="center sliding" id="title"></div>
       <div class="right">
         <span class="fa fa-bars navbar-toggle open-panel" data-panel="right"></span>
@@ -133,15 +133,15 @@
               <div class="card-content-inner">
                 <!-- TABS -->
                 <div class="buttons-row">
-                  <a href="#tab-des" class="tab-link active button">Description</a>
-                  <a href="#tab-loc" class="tab-link button">Location</a>
+                  <a href="#tab-loc" class="tab-link active button">Location</a>
+                  <a href="#tab-des" class="tab-link button">Description</a>
                 </div>
                 <!-- TAB WRAPPER -->
                 <div class="tabs">
-                  <div class="tab active" id="tab-des">
+                  <div class="tab" id="tab-des">
                     <p id="shopDesc"></p>
                   </div><br>
-                  <div class="tab" id="tab-loc">
+                  <div class="tab active" id="tab-loc">
                     <p id="location"></p>
                   </div>
                 </div>
