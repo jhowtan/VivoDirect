@@ -109,7 +109,7 @@ function createCatStorePage(index, catShopList) {
 
     mainView.router.loadContent($('#shopPage').html());
     $('#title').html(name);
-    $('.card-header-pic').html('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-black no-border">'+ name +'</div>');
+    $('.card-header-pic').html('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-black no-border"></div>');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
@@ -129,7 +129,7 @@ function createStorePage(index) {
 
     mainView.router.loadContent($('#shopPage').html());
     $('#title').html(name);
-    // $('.card-header-pic').append('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-white no-border"></div>');
+    $('.card-header-pic').append('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-white no-border"></div>');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
