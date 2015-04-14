@@ -13,7 +13,7 @@ var mainView = myApp.addView('.view-main', {
 // Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('promo', function (page) {
     // run createContentPage func after link was clicked
-    $$('#promo-aldo').on('click', function () {
+    $('#promo-aldo').on('click', function () {
         createStorePage(0);
     });
     $$('#promo-uniqlo').on('click', function () {
