@@ -114,6 +114,14 @@ function createCatStorePage(index, catShopList) {
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
     $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-fill color-green">Call</a>');
+    $$('.call-alert').on('click', function () {
+      myApp.confirm('Call '+ name + '?', tel, function() {
+          return true;
+        }, function() {
+          return true;
+        });
+    });
+
     return;
 }
 
@@ -136,10 +144,10 @@ function createStorePage(index) {
     $('#tel').html('Call ' + tel + '?');
 
     $$('.call-alert').on('click', function () {
-        myApp.confirm('Are you sure?', 'Call Confirmation', function() {
-          return;
+        myApp.confirm('Call '+ name + '?', tel, function() {
+          return true;
         }, function() {
-          return;
+          return true;
         });
     });
 	return;
