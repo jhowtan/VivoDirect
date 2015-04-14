@@ -1,44 +1,33 @@
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="left">
-      <a href="index.html" class="back">Back</a>
-    </div>
-    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-    <div class="center sliding">Navigation</div>
-    <div class="right">
-      <span class="fa fa-cog navbar-toggle open-panel" data-panel="right"></span>
+<div data-page="navi" class="page navbar-fixed toolbar-fixed">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left">
+        <a href="index.html" class="back">Back</a>
+      </div>
+      <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+      <div class="center sliding">Navigation</div>
+      <div class="right">
+        <span class="fa fa-cog navbar-toggle open-panel" data-panel="right"></span>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="pages navbar-through toolbar-fixed">
-  <!-- Page, "data-page" contains page name -->
-  <div data-page="navi" class="page">
-    <!-- <img class="background" src="/images/main_bg3.jpg"> -->
-    <!-- Scrollable page content -->
-    <div class="page-content">
-     <div id="map-container">
-       <canvas id="map"></canvas>
-     </div>
-     <div class="toolbar tabbar tabbar-labels">
+  <!-- Scrollable page content -->
+  <div class="page-content">
+    <div class="toolbar tabbar tabbar-labels">
       <div class="toolbar-inner">
         <a href="#tab1" class="tab-link active">
-          <i class="icon fa fa-cogs"></i>
-          <span class="tabbar-label">Label 1</span>
+          <i class="icon fa fa-search fa-2x"></i>
+          <span class="tabbar-label">Search</span>
         </a>
         <a href="#tab2" class="tab-link">
-          <i class="icon fa fa-cogs">
+          <i class="icon fa fa-location-arrow fa-2x">
             <span class="badge bg-red">5</span>
           </i>
-          <span class="tabbar-label">Label 2</span>
+          <span class="tabbar-label">Current Location</span>
         </a>
         <a href="#tab3" class="tab-link">
-          <i class="icon fa fa-bar"></i>
-          <span class="tabbar-label">Label 3</span>
-        </a>
-        <a href="#tab4" class="tab-link">
-          <i class="icon fa fa-cogs"></i>
-          <span class="tabbar-label">Label 4</span>
+          <i class="icon fa fa-compass fa-2x"></i>
+          <span class="tabbar-label">Directions</span>
         </a>
       </div>
     </div>
