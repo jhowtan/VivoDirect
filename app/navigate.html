@@ -1,3 +1,5 @@
+<div data-page="navi" class="page navbar-fixed toolbar-fixed">
+
 <!-- NAV BAR -->
 <div class="navbar">
   <div class="navbar-inner">
@@ -12,25 +14,84 @@
   </div>
 </div>
 
-<div data-page="navi" class="page navbar-fixed toolbar-fixed">
   <!-- Scrollable page content -->
   <div class="page-content">
-    <!-- Search bar -->
-    <form class="searchbar">
-      <div class="searchbar-input">
-        <input type="search" placeholder="Search">
-        <a href="#" class="searchbar-clear"></a>
+
+      <div class="tabs">
+       <!-- TAB1: SEARCH -->
+        <div id="tab1" class="tab active">
+          <div class="content-block">
+            <!-- Search bar -->
+            <form class="searchbar">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search">
+                <a href="#" class="searchbar-clear"></a>
+              </div>
+              <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+            <!-- Search bar overlay-->
+            <div class="searchbar-overlay"></div>
+            <div class="list-block list-block-search searchbar-found">
+              <div class="content-block-title">Shops</div>
+              <ul id="shops-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB2: CURRENT LOCATION -->
+        <div id="tab2" class="tab">
+          <div class="content-block">
+            <div class="content-block-title">Upcoming Promotions</div>
+            <div class="card">
+              <div class="card-header">ZARA Summer Sale</div>
+              <div class="card-content">
+                <div class="card-content-inner">1st May 2015<br>Enjoy a 10% off store-wide per purchase.</div>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header">Carl's Junior Student Promotion</div>
+              <div class="card-content">
+                <div class="card-content-inner">11th May 2015<br>Summer Holiday is coming! Get free flow of drink with purchase of any meal.</div>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header">Starbucks Free Voucher Givaway</div>
+              <div class="card-content">
+                <div class="card-content-inner">1st June 2015<br>Get one voucher with every purchase of two grande size drinks.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB3: DIRECTIONS -->
+        <div id="tab3" class="tab">
+          <div class="content-block">
+            <div class="content-block-title">Upcoming Promotions</div>
+            <div class="card">
+              <div class="card-header">ZARA Summer Sale</div>
+              <div class="card-content">
+                <div class="card-content-inner">1st May 2015<br>Enjoy a 10% off store-wide per purchase.</div>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header">Carl's Junior Student Promotion</div>
+              <div class="card-content">
+                <div class="card-content-inner">11th May 2015<br>Summer Holiday is coming! Get free flow of drink with purchase of any meal.</div>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header">Starbucks Free Voucher Givaway</div>
+              <div class="card-content">
+                <div class="card-content-inner">1st June 2015<br>Get one voucher with every purchase of two grande size drinks.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="#" class="searchbar-cancel">Cancel</a>
-    </form>
-    <!-- Search bar overlay-->
-    <div class="searchbar-overlay"></div>
-    <div class="list-block list-block-search searchbar-found">
-      <div class="content-block-title">Shops</div>
-      <ul id="shops-list"></ul>
-    </div>
-  <!-- MAP CANVAS -->
-  <!-- DIV1 -->
   </div>
   <!-- TOOL BAR -->
   <div class="toolbar tabbar tabbar-labels">

@@ -76,12 +76,21 @@ myApp.onPageInit('navi', function (page) {
                                 '</div>'+
                             '</li>');
     }
+
+    var mySearchbar = myApp.searchbar('.searchbar', {
+      searchList: '.list-block-search',
+      searchIn: '.item-title'
+    });
+
     $$('.shop-page').on('click', function(){
         var shopIndex = $(this).data('id');
-        console.log(shopIndex);
+        showShopLocation(shopIndex);
     });
 });
 
+function showShopLocation(id) {
+  mainView.router.loadContent()
+}
 
 
 // Dynamic List Creation for Categories
