@@ -19,6 +19,19 @@ $button-color: #C8B4BE;
   top: 0;
 }
 
+.panel {
+  background-color: rgba(255,101,64,0.9);
+  .content-block-title {
+    color: white;
+  }
+  .list-block ul {
+    background-color: transparent;
+    .item-content {
+      color: #FAFAFA;
+    }
+  }
+}
+
 // This container element gives us the scrollbars we want.
 .horizontal {
   width: 100%;
@@ -177,9 +190,10 @@ form.searchbar {
   .card {
     margin: 0px 0px;
   }
-
-  .button.active {
-    background: none;
-    background-color: rgba(200, 180, 190, 0.7);
+  .button {
+    background-color: #2F5A94;
+  }
+  .button.active{
+    background-color: rgba(74, 142, 232, 0.7);
   }
 }
