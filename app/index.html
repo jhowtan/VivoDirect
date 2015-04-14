@@ -123,28 +123,38 @@
     </div>
   </div>
   <div class="pages">
-  <div data-page="shop" class="page">
-    <div class="page-content">
-      <div class="content-block">
-         <div class="image img-holder">
-         </div>
-         <div class="image">
-          <h1 id="shopName"></h1>
-          <p id="location"></p>
-          <p id="shopDesc"></p>
-          <div class="row">
-            <div class="col-50">
-              <a id="tel">
+    <div data-page="shop" class="page">
+      <div class="page-content">
+        <div class="content-block">
+          <!-- BEGIN CARD -->
+          <div class="card card-header-pic">
+            <div class="card-content">
+              <div class="card-content-inner">
+                <!-- TABS -->
+                <div class="buttons-row">
+                  <a href="#tab-des" class="tab-link active button">Description</a>
+                  <a href="#tab-loc" class="tab-link button">Location</a>
+                </div>
+                <!-- TAB WRAPPER -->
+                <div class="tabs">
+                  <div class="tab active" id="tab-des">
+                    <p id="shopDesc"></p>
+                  </div><br>
+                  <div class="tab" id="tab-loc">
+                    <p id="location"></p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-50" id="navigate-to">
-              <a href="navigate.html" class="button button-big button-fill color-blue">Directions</a>
+            <div class="card-footer">
+              <a href="#" class="link call-alert">Call</a>
+              <a href="navigate.html" class="link">Directions</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </script>
 
 

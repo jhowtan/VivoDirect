@@ -109,11 +109,11 @@ function createCatStorePage(index, catShopList) {
 
     mainView.router.loadContent($('#shopPage').html());
     $('#title').html(name);
-    $('.img-holder').html('<img src="'+ imgUrl +'">');
+    $('.card-header-pic').html('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-black no-border">'+ name +'</div>');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
-    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-green">Call</a>');
+    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-fill color-green">Call</a>');
     return;
 }
 
@@ -129,10 +129,14 @@ function createStorePage(index) {
 
     mainView.router.loadContent($('#shopPage').html());
     $('#title').html(name);
-    $('.img-holder').html('<img src="'+ imgUrl +'">');
+    // $('.card-header-pic').html('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-white no-border"></div>');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
-    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-green">Call</a>');
+    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-fill color-green">Call</a>');
+
+    $$('.call-alert').on('click', function() {
+
+    })
 	return;
 }

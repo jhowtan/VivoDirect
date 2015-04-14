@@ -47,7 +47,7 @@ article {
     text-align: center;
 }
 .content-block-title {
-  color: white;
+  color: auto;
 }
 .browserupgrade {
   margin: 0.2em 0;
@@ -60,7 +60,7 @@ article {
   margin: 80px 50px;
   text-align: center;
   h1, h2, p {
-    color:white;
+    color: auto;
   }
   .button-group {
     margin-top: 50px;
@@ -93,6 +93,12 @@ ul#shops-list {
 
 .list-block {
   margin-top: 0px;
+}
+
+.card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
 }
 
 .promo>.page-content {
