@@ -1,4 +1,5 @@
 <div data-page="navi" class="page navbar-fixed toolbar-fixed">
+  <!-- NAV BAR -->
   <div class="navbar">
     <div class="navbar-inner">
       <div class="left">
@@ -7,29 +8,46 @@
       <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
       <div class="center sliding">Navigation</div>
       <div class="right">
-        <span class="fa fa-cog navbar-toggle open-panel" data-panel="right"></span>
+        <span class="fa fa-bars navbar-toggle open-panel" data-panel="right"></span>
       </div>
     </div>
   </div>
   <!-- Scrollable page content -->
   <div class="page-content">
-    <div class="toolbar tabbar tabbar-labels">
-      <div class="toolbar-inner">
-        <a href="#tab1" class="tab-link active">
-          <i class="icon fa fa-search fa-2x"></i>
-          <span class="tabbar-label">Search</span>
-        </a>
-        <a href="#tab2" class="tab-link">
-          <i class="icon fa fa-location-arrow fa-2x">
-            <span class="badge bg-red">5</span>
-          </i>
-          <span class="tabbar-label">Current Location</span>
-        </a>
-        <a href="#tab3" class="tab-link">
-          <i class="icon fa fa-compass fa-2x"></i>
-          <span class="tabbar-label">Directions</span>
-        </a>
+    <!-- Search bar -->
+    <form class="searchbar">
+      <div class="searchbar-input">
+        <input type="search" placeholder="Search">
+        <a href="#" class="searchbar-clear"></a>
       </div>
+      <a href="#" class="searchbar-cancel">Cancel</a>
+    </form>
+    <!-- Search bar overlay-->
+    <div class="searchbar-overlay"></div>
+    <div class="list-block list-block-search searchbar-found">
+      <div class="content-block-title">Shops</div>
+      <ul id="shops-list"></ul>
+    </div>
+  <!-- MAP CANVAS -->
+  <!-- DIV1 -->
+  </div>
+  <!-- TOOL BAR -->
+  <div class="toolbar tabbar tabbar-labels">
+    <div class="toolbar-inner">
+      <a href="#tab1" class="tab-link active">
+        <i class="icon fa fa-search fa-2x"></i>
+        <span class="tabbar-label">Search</span>
+      </a>
+      <a href="#tab2" class="tab-link">
+        <i class="icon fa fa-map-marker fa-2x">
+<!--           <span class="badge bg-red">5</span> -->
+        </i>
+        <span class="tabbar-label">Current Location</span>
+      </a>
+      <a href="#tab3" class="tab-link">
+        <i class="icon fa fa-location-arrow fa-2x"></i>
+        <span class="tabbar-label">Directions</span>
+      </a>
     </div>
   </div>
 </div>
