@@ -78,8 +78,8 @@ myApp.onPageInit('navi', function (page) {
 // Dynamic List Creation for Categories
 function createCatPage(index) {
   var catShopList = [];
-  for (var i=0; i<categories[index].shops.shop.length; i++) {
-      catShopList.push(categories[index].shops.shop[i]);
+  for (var i=0; i<categories[index].shops.shop.length; i++){
+    catShopList.push(categories[index].shops.shop[i]);
   }
   mainView.router.loadContent($('#catPage').html());
   $('#catTitle').html(categories[index].name);
@@ -129,14 +129,18 @@ function createStorePage(index) {
 
     mainView.router.loadContent($('#shopPage').html());
     $('#title').html(name);
-    // $('.card-header-pic').html('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-white no-border"></div>');
+    // $('.card-header-pic').append('<div style="background-image:url(\''+ imgUrl +'\')" valign="top" class="card-header color-white no-border"></div>');
     $('#shopName').html(name);
     $('#location').html('Located at Level '+ lvl + ', Unit: ' + addr);
     $('#shopDesc').html(desc);
-    $('#tel').html('<a href="tel:'+tel+'" class="button button-big button-fill color-green">Call</a>');
+    $('#tel').html('Call ' + tel + '?');
 
-    $$('.call-alert').on('click', function() {
-
-    })
+    $$('.call-alert').on('click', function () {
+        myApp.confirm('Are you sure?', 'Call Confirmation', function() {
+          return;
+        }, function() {
+          return;
+        });
+    });
 	return;
 }

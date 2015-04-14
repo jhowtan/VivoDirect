@@ -36,9 +36,18 @@ var cat = [
 
 for (var i = 0; i < categories.length-1; i++ ) {
   categories[i].name = cat[i];
-  for (var j=0; j < categories[i].shops.shop.length; j++) {
-    categories[i].shops.shop[j].desc = categories[i].shops.shop[j].desc[0];
-    shops.push(categories[i].shops.shop[j]);
+  if (i < 3) {
+    for (var j=0; j < categories[i].shops.shop.length; j++) {
+      categories[i].shops.shop[j].desc = categories[i].shops.shop[j].desc[0];
+      shops.push(categories[i].shops.shop[j]);
+    }
+  }
+  else {
+    categories[i].shops = categories[i+1].shops;
+    for (var k=0; k < categories[i].shops.shop.length; k++) {
+      categories[i].shops.shop[k].desc = categories[i].shops.shop[k].desc[0];
+      shops.push(categories[i].shops.shop[k]);
+    }
   }
 }
 var options = {
