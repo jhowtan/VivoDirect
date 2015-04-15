@@ -128,18 +128,27 @@ article {
 //   overflow: scroll;
 // }
 
+.navi {
+  .page-content{
+    overflow: hidden;
+    height: auto;
+  }
+  .content-block{
+    margin: 10px 0;
+  }
+}
+
 .nav-container {
   margin: 0 auto;
   margin-top: 10%;
   width: 100%;
-  height: 80%;
+  height: 380px;
   overflow: scroll;
-  overflow-y: hidden;
 }
 
 .nav-instruction {
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 1%;
   width: 100%;
   height: 60px;
   background-color: #F29F05;
