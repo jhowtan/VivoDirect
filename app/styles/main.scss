@@ -138,9 +138,9 @@ article {
 
 .nav-container {
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 5%;
   width: 100%;
-  height: 380px;
+  height: 400px;
   overflow: scroll;
 }
 
@@ -220,6 +220,34 @@ form.searchbar {
   height: 60px;
   border: 1px solid white;
 }
+.tab-info {
+
+  .button {
+    color: white;
+    border: 1px solid #88A61B;
+    background-color: rgba(136, 166, 27, 0.5);
+  }
+  .button.active{
+    background-color: #88A61B;
+  }
+}
+.tab-floor {
+
+  .button {
+    color: white;
+    border: 1px solid #F29F05;
+    background-color: rgba(242, 159, 5, 0.5);
+  }
+  .button.active{
+    background-color: #F29F05;
+  }
+}
+.form-to-dir {
+  color: white;
+  background-color: #F29F05;
+  border: 1px solid #F29F05;
+}
+
 
 .promo {
   .page-content {
@@ -229,9 +257,9 @@ form.searchbar {
     margin: 0px 0px;
   }
   .button {
-    background-color: #2F5A94;
+    background-color: rgba(74, 142, 232, 0.7);
   }
   .button.active{
-    background-color: rgba(74, 142, 232, 0.7);
+    background-color: #0E3D59;
   }
 }
