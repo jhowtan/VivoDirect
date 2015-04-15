@@ -24,13 +24,13 @@
           <div class="content-block">
             <!-- REFER TO THIS PAGE FOR DOCUMENTATION -->
             <!-- http://www.idangero.us/framework7/docs/smart-select.html -->
-            <div class="list-block">
+            <form id="directions" class="list-block">
               <ul>
                 <!-- Smart select item -->
                 <li>
                 <!-- TRYING TO GET THE NAVBAR TO WORK WITHOUT POPUP-->
-                  <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search location">
-                    <select name="from_dir">
+                  <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search location"  data-back-on-select="true">
+                    <select name="from_dir" id="from_dir">
                       <option value="currloc" selected>Current Location</option>
                     </select>
                     <div class="item-content">
@@ -44,8 +44,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search destination">
-                    <select name="to_dir">
+                  <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search destination" data-back-on-select="true">
+                    <select name="to_dir" id="to_dir">
                     </select>
                     <div class="item-content">
                       <div class="item-inner">
@@ -58,7 +58,10 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </form>
+          </div>
+          <div class="content-block">
+            <a href="#tab3" class="button tab-link form-to-dir">Go</a>
           </div>
         </div>
 

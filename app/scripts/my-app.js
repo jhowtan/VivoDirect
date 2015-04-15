@@ -74,19 +74,11 @@ myApp.onPageInit('dir', function (page) {
 
 myApp.onPageInit('navi', function (page) {
     for (var i=0; i<shops.length; i++) {
-      $('#shops-list').append('<li class="item-content item-link shop-page" data-id="'+i +'">' +
-                                '<div class="item-inner">' +
-                                    '<div class="item-title">' + shops[i].name  + '</div>'+
-                                '</div>'+
-                            '</li>');
+      $('#from_dir').append('<option value="'+i+'">'+ shops[i].name +'</option>');
+      $('#to_dir').append('<option value="'+i+'">'+ shops[i].name +'</option>');
     }
 
-    // var mySearchbar = myApp.searchbar('.searchbar', {
-    //   searchList: '.list-block-search',
-    //   searchIn: '.item-title'
-    // });
-
-    $$('.shop-page').on('click', function(){
+    $$('.start-route').on('click', function(){
         var shopIndex = $(this).data('id');
         showShopLocation(shopIndex);
     });
