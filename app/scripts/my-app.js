@@ -85,7 +85,34 @@ myApp.onPageInit('navi', function (page) {
 
     $$('#current').on('click', function(){
       scrollToMiddle('currloc', 'mapcurr');
-    })
+    });
+
+    //for navigation
+    $('#instruction1').on('click', function(){
+      $('#instruction1').addClass("hidemap");
+      $('#instruction2').removeClass("hidemap");
+      $('#mapnav1').addClass("hidemap");
+      $('#mapnav2').removeClass("hidemap");
+    });
+    $('#instruction2').on('click', function(){
+      $('#instruction2').addClass("hidemap");
+      $('#instruction3').removeClass("hidemap");
+      $('#mapnav2').addClass("hidemap");
+      $('#mapnav3').removeClass("hidemap");
+    });
+      $('#instruction3').on('click', function(){
+      $('#instruction3').addClass("hidemap");
+      $('#instruction4').removeClass("hidemap");
+      $('#mapnav3').addClass("hidemap");
+      $('#mapnav4').removeClass("hidemap");
+    });
+      $('#instruction4').on('click', function(){
+      $('#instruction4').addClass("hidemap");
+      $('#instruction5').removeClass("hidemap");
+      $('#mapnav4').addClass("hidemap");
+      $('#mapnav5').removeClass("hidemap");
+    });
+
 });
 
 function showShopLocation(id) {
@@ -191,3 +218,5 @@ function scrollToMiddle(containerID, elID)
   container.scrollTop = container.scrollTop - scrollBack;
   console.log('Success');
 }
+
+

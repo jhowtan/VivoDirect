@@ -107,6 +107,7 @@ article {
   background-color: #F29F05;
 }
 .navbar{
+  color: white;
   a:link, a:hover, a:active, a:visited {
     color: white;
   }
@@ -119,13 +120,35 @@ article {
   height: 400px;
   overflow: scroll;
 }
+
 .nav-container {
   margin: 0 auto;
   margin-top: 15%;
   width: 90%;
-  height: 400px;
+  height: 340px;
   overflow: scroll;
 }
+
+.nav-instruction{
+  margin: 0 auto;
+  // margin-top: 15%;
+  width: 90%;
+  height: 60px;
+  background-color: #F29F05;
+  color: white;
+  .col-20 {
+    padding: 0 10px 0 10px;
+  }
+  .col-80 {
+    padding: 10px 0 0 10px;
+
+  }
+}
+.hidemap {
+  display: none;
+}
+
+
 .index>.page-content {
   // margin: 80px 50px;
   text-align: center;
