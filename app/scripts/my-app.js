@@ -1,5 +1,9 @@
 // Initialize your app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    smartSelectSearchbar: true,
+    smartSelectInPopup: true,
+    swipeBackPage: true
+});
 
 // Export selectors engine
 var $$ = Dom7;
@@ -77,18 +81,18 @@ myApp.onPageInit('navi', function (page) {
                             '</li>');
     }
 
-    var mySearchbar = myApp.searchbar('.searchbar', {
-      searchList: '.list-block-search',
-      searchIn: '.item-title'
-    });
+    // var mySearchbar = myApp.searchbar('.searchbar', {
+    //   searchList: '.list-block-search',
+    //   searchIn: '.item-title'
+    // });
 
     $$('.shop-page').on('click', function(){
         var shopIndex = $(this).data('id');
         showShopLocation(shopIndex);
     });
 
-    $$('#fa-map-marker').on('click', function(){
-      scrollToMiddle($('#currloc'), $('#maploc'));
+    $$('#current').on('click', function(){
+      scrollToMiddle('currloc', 'mapcurr');
     })
 });
 
@@ -179,13 +183,19 @@ function scrollToMiddle(containerID, elID)
 {
   // If element does not Exist then return
   var el = document.getElementById(elID);
-  if (el == null) return;
+  if (el == null) return console.log('null return');
 
   // If container does not Exist then return
   var container = document.getElementById(containerID);
-  if (container == null) return;
+  if (container == null) return console.log('nullreturn');
 
-  var middle_height = (-1) * container.clientHeight / 2;
+  // Position container at the top line then scroll el into view
+  container.scrollTop = 0;
+  el.scrollIntoView(true);
 
-  el.top = middle_height + "px";
+  // Scroll back nothing if element is at bottom of container else do it
+  // for half the height of the containers display area
+  var scrollBack = (container.scrollHeight - container.scrollTop <= container.clientWidth) ? 0 : container.clientWidth/2;
+  container.scrollTop = container.scrollTop - scrollBack;
+  console.log('Success');
 }
