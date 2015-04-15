@@ -118,15 +118,13 @@ article {
     background-color: #F29F05;
   }
 }
-
-// // Original .nav-container
-// .map-container {
-//   margin: 0 auto;
-//   margin-top: 15%;
-//   width: 90%;
-//   height: 400px;
-//   overflow: scroll;
-// }
+.map-container {
+  margin: 0 auto;
+  margin-top: 15%;
+  width: 90%;
+  height: 400px;
+  overflow: scroll;
+}
 
 .navi {
   .page-content{
@@ -146,7 +144,7 @@ article {
   overflow: scroll;
 }
 
-.nav-instruction {
+.nav-instruction{
   margin: 0 auto;
   margin-top: 1%;
   width: 100%;
@@ -231,9 +229,9 @@ form.searchbar {
     margin: 0px 0px;
   }
   .button {
-    background-color: rgba(74, 142, 232, 0.8);
+    background-color: #2F5A94;
   }
   .button.active{
-    background-color: rgba(47, 90, 148, 1);
+    background-color: rgba(74, 142, 232, 0.7);
   }
 }
