@@ -20,7 +20,7 @@ $button-color: #C8B4BE;
 }
 
 .panel {
-  background-color: rgba(255,101,64,0.9);
+  background-color: #F25C05;
   .content-block-title {
     color: white;
   }
@@ -98,10 +98,11 @@ article {
   color: white;
   background-color: #0E3D59;
 }
-.nav-dir{
+.nav-dir,.nav-storeinfo {
   color: white;
   background-color: #88A61B;
 }
+
 .nav-navi{
   color: white;
   background-color: #F29F05;
@@ -112,7 +113,11 @@ article {
     color: white;
   }
 }
-
+.smart-select-page {
+  .navbar-inner {
+    background-color: #F29F05;
+  }
+}
 .map-container {
   margin: 0 auto;
   margin-top: 15%;
