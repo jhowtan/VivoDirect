@@ -68,7 +68,28 @@
         <!-- TAB2: CURRENT LOCATION -->
         <div id="tab2" class="tab">
           <div class="content-block">
-            <div class="map-container" id="currloc"><img id="mapcurr" src="images/map3.jpg"></div>
+            <div class="tabs tabs-bottom">
+              <!-- First tab-->
+              <div class="tab active" id="b1">
+                 <div class="nav-container" id="currloc"><img id="mapcurr" src="images/map3.jpg"></div>
+              </div>
+              <!-- Second tab-->
+              <div class="tab" id="b2">
+                <div class="nav-container" id="currloc"><img id="mapcurr" src="images/map1.jpg"></div>
+              </div>
+              <!-- Third tab-->
+              <div class="tab" id="l2">
+                <div class="nav-container" id="currloc"><img id="mapcurr" src="images/map2.jpg"></div>
+              </div>
+            </div>
+            <div class="buttons-row">
+              <!-- Link to 1st tab, active -->
+              <a href="#b1" class="tab-link active button">L1</a>
+              <!-- Link to 2nd tab -->
+              <a href="#b2" class="tab-link button">L2</a>
+              <!-- Link to 3rd tab -->
+              <a href="#l2" class="tab-link button">B1</a>
+            </div>
           </div>
         </div>
 
