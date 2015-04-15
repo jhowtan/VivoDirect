@@ -1,5 +1,4 @@
 /* jshint devel:true */
-console.log('\'Allo \'Allo!');
 var shops = [];
 var categories = vivocity[0].categories.category;
 var cat = [
@@ -50,17 +49,4 @@ for (var i = 0; i < categories.length-1; i++ ) {
     }
   }
 }
-var options = {
-  caseSensitive: false,
-  includeScore: false,
-  shouldSort: true,
-  threshold: 0.2,
-  location: 0,
-  distance: 100,
-  maxPatternLength: 32,
-  keys: ["name", "desc"]
-};
-
-var fCat = new Fuse(categories, options);
-var fShop = new Fuse(shops, options);
-
+console.log('Initialized data');
