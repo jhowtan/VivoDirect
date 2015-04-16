@@ -86,7 +86,9 @@ myApp.onPageInit('navi', function (page) {
     $$('#current').on('click', function(){
       scrollToMiddle('currloc', 'mapcurr');
     });
-
+    $('.form-to-dir').on('click', function(){
+      $('.directions').addClass("active");
+    });
     //for navigation
     $('#instruction1').on('click', function(){
       $('#instruction1').addClass("hidemap");
