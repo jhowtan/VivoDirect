@@ -10,14 +10,17 @@ Please ensure that you have the following installed on your system:
 * Gulp
 * Bower
 
-` sudo npm install -g gulp
-` sudo npm install -g bower
+`sudo npm install -g gulp`
+
+`sudo npm install -g bower`
 
 ## To run the app locally
 
-` git clone https://github.com/jhowtan/VivoDirect.git
-` npm install & bower install
-` gulp serve
+` git clone https://github.com/jhowtan/VivoDirect.git `
+
+` npm install & bower install `
+
+` gulp serve `
 
 ## Live Demo
 
